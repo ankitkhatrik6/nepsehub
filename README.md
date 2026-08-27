@@ -1,6 +1,6 @@
 # nepse
 
-[![npm version](https://img.shields.io/npm/v/nepse.svg)](https://www.npmjs.com/package/nepse)
+[![npm version](https://img.shields.io/npm/v/@ankitkhatrik6/nepse.svg)](https://www.npmjs.com/package/@ankitkhatrik6/nepse)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178c6.svg)](https://www.typescriptlang.org/)
 
@@ -26,19 +26,19 @@ A TypeScript library and command-line tool (CLI) for accessing **real-time and h
 
 ```bash
 # Get live quote for Nabil Bank
-npx nepse stock NABIL
+npx @ankitkhatrik6/nepse stock NABIL
 
 # View NEPSE market summary and indices
-npx nepse market
+npx @ankitkhatrik6/nepse market
 
 # View top gainers of the session
-npx nepse gainers
+npx @ankitkhatrik6/nepse gainers
 ```
 
 ### Install Globally as CLI
 
 ```bash
-npm install -g nepse
+npm install -g @ankitkhatrik6/nepse
 ```
 
 Executable name `nepse` is now available globally:
@@ -56,11 +56,11 @@ nepse search "Bank"
 ### Install as Library in your Project
 
 ```bash
-npm install nepse
+npm install @ankitkhatrik6/nepse
 # or
-pnpm add nepse
+pnpm add @ankitkhatrik6/nepse
 # or
-yarn add nepse
+yarn add @ankitkhatrik6/nepse
 ```
 
 ---
@@ -72,7 +72,7 @@ yarn add nepse
 Fetches the latest trading metrics for a given stock ticker symbol.
 
 ```typescript
-import { getQuote } from 'nepse';
+import { getQuote } from '@ankitkhatrik6/nepse';
 
 async function main() {
   const quote = await getQuote('NABIL');
@@ -115,7 +115,7 @@ main();
 Fetches the overall NEPSE market turnover, volume, transactions, and major index values.
 
 ```typescript
-import { getMarketSummary } from 'nepse';
+import { getMarketSummary } from '@ankitkhatrik6/nepse';
 
 const summary = await getMarketSummary();
 console.log(`NEPSE Index: ${summary.indices.nepse.currentValue} (${summary.indices.nepse.percentageChange}%)`);
@@ -129,7 +129,7 @@ console.log(`Total Turnover: Rs. ${summary.totalTurnoverRs.toLocaleString('en-IN
 Retrieves historical OHLCV price records for a stock.
 
 ```typescript
-import { getHistory } from 'nepse';
+import { getHistory } from '@ankitkhatrik6/nepse';
 
 // Get last 15 trading days
 const history = await getHistory('NABIL', { limit: 15 });
@@ -146,7 +146,7 @@ history.forEach((h) => {
 Searches actively listed NEPSE companies by ticker symbol or full company name.
 
 ```typescript
-import { searchStocks } from 'nepse';
+import { searchStocks } from '@ankitkhatrik6/nepse';
 
 const banks = await searchStocks('Bank');
 console.log(`Found ${banks.length} bank securities.`);
@@ -157,7 +157,7 @@ console.log(`Found ${banks.length} bank securities.`);
 ### 5. Top Movers (`getTopGainers`, `getTopLosers`, `getMostActive`)
 
 ```typescript
-import { getTopGainers, getTopLosers, getMostActive } from 'nepse';
+import { getTopGainers, getTopLosers, getMostActive } from '@ankitkhatrik6/nepse';
 
 const [gainers, losers, active] = await Promise.all([
   getTopGainers(),
