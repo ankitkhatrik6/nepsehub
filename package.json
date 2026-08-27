@@ -1,0 +1,56 @@
+{
+  "name": "nepse",
+  "version": "1.0.0",
+  "description": "TypeScript library and CLI for Nepal Stock Exchange (NEPSE) real-time and historical market data.",
+  "author": "Ankit Khatri KC",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "nepse": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "*.png"
+  ],
+  "keywords": [
+    "nepse",
+    "nepal-stock-exchange",
+    "nepse-api",
+    "stock-market",
+    "market-data",
+    "stocks",
+    "nabil",
+    "nots",
+    "nepse-cli",
+    "cli"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "cli-table3": "^0.6.5",
+    "commander": "^15.0.0",
+    "picocolors": "^1.1.1",
+    "tsup": "^8.5.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "eslint": "9.39.1",
+    "typescript": "5.9.3",
+    "vitest": "^4.1.11"
+  }
+}
