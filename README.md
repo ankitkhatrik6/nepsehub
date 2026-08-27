@@ -1,6 +1,6 @@
-# nepse
+# nepsehub
 
-[![npm version](https://img.shields.io/npm/v/@ankitkhatrik6/nepse.svg)](https://www.npmjs.com/package/@ankitkhatrik6/nepse)
+[![npm version](https://img.shields.io/npm/v/nepsehub.svg)](https://www.npmjs.com/package/nepsehub)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178c6.svg)](https://www.typescriptlang.org/)
 
@@ -26,41 +26,41 @@ A TypeScript library and command-line tool (CLI) for accessing **real-time and h
 
 ```bash
 # Get live quote for Nabil Bank
-npx @ankitkhatrik6/nepse stock NABIL
+npx nepsehub stock NABIL
 
 # View NEPSE market summary and indices
-npx @ankitkhatrik6/nepse market
+npx nepsehub market
 
 # View top gainers of the session
-npx @ankitkhatrik6/nepse gainers
+npx nepsehub gainers
 ```
 
 ### Install Globally as CLI
 
 ```bash
-npm install -g @ankitkhatrik6/nepse
+npm install -g nepsehub
 ```
 
-Executable name `nepse` is now available globally:
+Executable name `nepsehub` is now available globally:
 
 ```bash
-nepse stock NABIL
-nepse market
-nepse gainers
-nepse losers
-nepse active
-nepse history NABIL --limit 10
-nepse search "Bank"
+nepsehub stock NABIL
+nepsehub market
+nepsehub gainers
+nepsehub losers
+nepsehub active
+nepsehub history NABIL --limit 10
+nepsehub search "Bank"
 ```
 
 ### Install as Library in your Project
 
 ```bash
-npm install @ankitkhatrik6/nepse
+npm install nepsehub
 # or
-pnpm add @ankitkhatrik6/nepse
+pnpm add nepsehub
 # or
-yarn add @ankitkhatrik6/nepse
+yarn add nepsehub
 ```
 
 ---
@@ -72,7 +72,7 @@ yarn add @ankitkhatrik6/nepse
 Fetches the latest trading metrics for a given stock ticker symbol.
 
 ```typescript
-import { getQuote } from '@ankitkhatrik6/nepse';
+import { getQuote } from 'nepsehub';
 
 async function main() {
   const quote = await getQuote('NABIL');
@@ -115,7 +115,7 @@ main();
 Fetches the overall NEPSE market turnover, volume, transactions, and major index values.
 
 ```typescript
-import { getMarketSummary } from '@ankitkhatrik6/nepse';
+import { getMarketSummary } from 'nepsehub';
 
 const summary = await getMarketSummary();
 console.log(`NEPSE Index: ${summary.indices.nepse.currentValue} (${summary.indices.nepse.percentageChange}%)`);
@@ -129,7 +129,7 @@ console.log(`Total Turnover: Rs. ${summary.totalTurnoverRs.toLocaleString('en-IN
 Retrieves historical OHLCV price records for a stock.
 
 ```typescript
-import { getHistory } from '@ankitkhatrik6/nepse';
+import { getHistory } from 'nepsehub';
 
 // Get last 15 trading days
 const history = await getHistory('NABIL', { limit: 15 });
@@ -146,7 +146,7 @@ history.forEach((h) => {
 Searches actively listed NEPSE companies by ticker symbol or full company name.
 
 ```typescript
-import { searchStocks } from '@ankitkhatrik6/nepse';
+import { searchStocks } from 'nepsehub';
 
 const banks = await searchStocks('Bank');
 console.log(`Found ${banks.length} bank securities.`);
@@ -157,7 +157,7 @@ console.log(`Found ${banks.length} bank securities.`);
 ### 5. Top Movers (`getTopGainers`, `getTopLosers`, `getMostActive`)
 
 ```typescript
-import { getTopGainers, getTopLosers, getMostActive } from '@ankitkhatrik6/nepse';
+import { getTopGainers, getTopLosers, getMostActive } from 'nepsehub';
 
 const [gainers, losers, active] = await Promise.all([
   getTopGainers(),
@@ -170,58 +170,58 @@ const [gainers, losers, active] = await Promise.all([
 
 ## CLI Commands & Options
 
-### `nepse stock <symbol>`
+### `nepsehub stock <symbol>`
 
 Get real-time quote for a stock.
 
 ```bash
-nepse stock NABIL
-nepse stock SHIVM --json
-nepse stock NABIL --watch --interval 3000
+nepsehub stock NABIL
+nepsehub stock SHIVM --json
+nepsehub stock NABIL --watch --interval 3000
 ```
 
-### `nepse market`
+### `nepsehub market`
 
 Get market overview, indices, total turnover and status.
 
 ```bash
-nepse market
-nepse market --json
+nepsehub market
+nepsehub market --json
 ```
 
-### `nepse history <symbol>`
+### `nepsehub history <symbol>`
 
 Get historical OHLCV data with trend sparkline.
 
 ```bash
-nepse history NABIL --limit 30
-nepse history GBIME --json
+nepsehub history NABIL --limit 30
+nepsehub history GBIME --json
 ```
 
-### `nepse search <query>`
+### `nepsehub search <query>`
 
 Search stocks by symbol or company name.
 
 ```bash
-nepse search Microfinance
-nepse search Hydro
+nepsehub search Microfinance
+nepsehub search Hydro
 ```
 
-### `nepse gainers` & `nepse losers`
+### `nepsehub gainers` & `nepsehub losers`
 
 List top 10 price gainers / losers of the day.
 
 ```bash
-nepse gainers
-nepse losers
+nepsehub gainers
+nepsehub losers
 ```
 
-### `nepse active`
+### `nepsehub active`
 
 List top 10 most active stocks by trading turnover.
 
 ```bash
-nepse active
+nepsehub active
 ```
 
 ---

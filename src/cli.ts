@@ -15,11 +15,11 @@ const FOOTER_TEXT = `\n${pc.dim('─'.repeat(50))}\nDeveloped with ${pc.red('❤
 const program = new Command();
 
 program
-  .name('nepse')
+  .name('nepsehub')
   .description('Nepal Stock Exchange (NEPSE) market data')
   .version('1.0.0');
 
-// nepse stock <symbol>
+// nepsehub stock <symbol>
 program
   .command('stock <symbol>')
   .description('Get live quote and trading metrics for a stock ticker (e.g. NABIL, GBIME)')
@@ -39,7 +39,7 @@ program
     }
   });
 
-// nepse market
+// nepsehub market
 program
   .command('market')
   .description('Get NEPSE market summary, turnover, traded shares, and major indices')
@@ -57,7 +57,7 @@ program
     }
   });
 
-// nepse history <symbol>
+// nepsehub history <symbol>
 program
   .command('history <symbol>')
   .description('Get historical OHLCV price and volume data for a stock')
@@ -77,7 +77,7 @@ program
     }
   });
 
-// nepse search <query>
+// nepsehub search <query>
 program
   .command('search <query>')
   .description('Search listed stocks on NEPSE by ticker symbol or company name')
@@ -95,7 +95,7 @@ program
     }
   });
 
-// nepse gainers
+// nepsehub gainers
 program
   .command('gainers')
   .description('Get top 10 gaining stocks of the trading session')
@@ -113,7 +113,7 @@ program
     }
   });
 
-// nepse losers
+// nepsehub losers
 program
   .command('losers')
   .description('Get top 10 losing stocks of the trading session')
@@ -131,7 +131,7 @@ program
     }
   });
 
-// nepse active
+// nepsehub active
 program
   .command('active')
   .description('Get most active stocks by turnover on NEPSE')
