@@ -12,11 +12,11 @@ A TypeScript library and command-line tool (CLI) for accessing **real-time and h
 
 | Live Stock Quote | NEPSE Market Summary |
 |:---:|:---:|
-| <img src="./demo1.png" alt="Stock Quote CLI" width="400"/> | <img src="./demo2.png" alt="Market Summary CLI" width="400"/> |
+| <img src="./assets/demo1.png" alt="Stock Quote CLI" width="400"/> | <img src="./assets/demo2.png" alt="Market Summary CLI" width="400"/> |
 
 | Stock Historical Trend | Top Gainers |
 |:---:|:---:|
-| <img src="./demo3.png" alt="Historical Data CLI" width="400"/> | <img src="./demo4.png" alt="Top Gainers CLI" width="400"/> |
+| <img src="./assets/demo3.png" alt="Historical Data CLI" width="400"/> | <img src="./assets/demo4.png" alt="Top Gainers CLI" width="400"/> |
 
 ---
 
