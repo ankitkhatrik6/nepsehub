@@ -170,6 +170,14 @@ const [gainers, losers, active] = await Promise.all([
 
 ## CLI Commands & Options
 
+### `nepsehub -V, --version`
+
+Check the currently installed version of nepsehub.
+
+```bash
+nepsehub -V
+```
+
 ### `nepsehub stock <symbol>`
 
 Get real-time quote for a stock.
