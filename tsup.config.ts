@@ -9,7 +9,7 @@ export default defineConfig({
   dts: true,
   clean: true,
   splitting: false,
+  minify: true,
   sourcemap: true,
   shims: true,
 });
-
