@@ -14,6 +14,11 @@ import pkg from '../package.json';
 
 const FOOTER_TEXT = `\n${pc.dim('─'.repeat(50))}\nDeveloped with ${pc.red('❤')} by ${pc.bold(pc.green('Ankit Khatri KC'))}\n`;
 
+const handleError = (err: unknown) => {
+  console.error(pc.red(`Error: ${(err as Error).message}`));
+  process.exit(1);
+};
+
 const program = new Command();
 
 program
@@ -36,8 +41,7 @@ program
         if (!options.json && !options.watch) console.log(FOOTER_TEXT);
       }
     } catch (err: unknown) {
-      console.error(pc.red(`Error: ${(err as Error).message}`));
-      process.exit(1);
+      handleError(err);
     }
   });
 
@@ -54,8 +58,7 @@ program
         if (!options.json) console.log(FOOTER_TEXT);
       }
     } catch (err: unknown) {
-      console.error(pc.red(`Error: ${(err as Error).message}`));
-      process.exit(1);
+      handleError(err);
     }
   });
 
@@ -74,8 +77,7 @@ program
         if (!options.json) console.log(FOOTER_TEXT);
       }
     } catch (err: unknown) {
-      console.error(pc.red(`Error: ${(err as Error).message}`));
-      process.exit(1);
+      handleError(err);
     }
   });
 
@@ -92,8 +94,7 @@ program
         if (!options.json) console.log(FOOTER_TEXT);
       }
     } catch (err: unknown) {
-      console.error(pc.red(`Error: ${(err as Error).message}`));
-      process.exit(1);
+      handleError(err);
     }
   });
 
@@ -110,8 +111,7 @@ program
         if (!options.json) console.log(FOOTER_TEXT);
       }
     } catch (err: unknown) {
-      console.error(pc.red(`Error: ${(err as Error).message}`));
-      process.exit(1);
+      handleError(err);
     }
   });
 
@@ -128,8 +128,7 @@ program
         if (!options.json) console.log(FOOTER_TEXT);
       }
     } catch (err: unknown) {
-      console.error(pc.red(`Error: ${(err as Error).message}`));
-      process.exit(1);
+      handleError(err);
     }
   });
 
@@ -146,8 +145,7 @@ program
         if (!options.json) console.log(FOOTER_TEXT);
       }
     } catch (err: unknown) {
-      console.error(pc.red(`Error: ${(err as Error).message}`));
-      process.exit(1);
+      handleError(err);
     }
   });
 
