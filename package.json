@@ -1,6 +1,6 @@
 {
   "name": "nepsehub",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "TypeScript library and CLI for Nepal Stock Exchange (NEPSE) real-time and historical market data.",
   "author": "Ankit Khatri KC",
   "main": "./dist/index.js",
