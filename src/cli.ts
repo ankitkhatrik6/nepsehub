@@ -10,6 +10,7 @@ import {
   losersCommand,
   activeCommand,
 } from './commands';
+import pkg from '../package.json';
 
 const FOOTER_TEXT = `\n${pc.dim('─'.repeat(50))}\nDeveloped with ${pc.red('❤')} by ${pc.bold(pc.green('Ankit Khatri KC'))}\n`;
 
@@ -18,7 +19,7 @@ const program = new Command();
 program
   .name('nepsehub')
   .description('Nepal Stock Exchange (NEPSE) market data')
-  .version('1.0.0');
+  .version(pkg.version);
 
 // nepsehub stock <symbol>
 program
